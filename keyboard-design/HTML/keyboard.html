@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <link rel="stylesheet" href="../CSS/keyboard_style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="display">
+        <input type="text" placeholder="type here...">
+    </div>
+    <div class="keyboard">
+        <div class="logo">d<i>e</i>ll</div>
+        <div class="keyboard-border">
+            <div class="kb-first-row">
+                <div class="key single" data-key=""><i>Esc</i> </div>
+                <div class="key-group-1 group">
+                    <div class="key" data-key=""><i>F1</i> </div>
+                    <div class="key" data-key=""><i>F2</i> </div>
+                    <div class="key" data-key=""><i>F3</i> </div>
+                    <div class="key" data-key=""><i>F4</i> </div>
+                </div>
+                <div class="key-group-2 group">
+                    <div class="key" data-key=""><i>F5</i> </div>
+                    <div class="key" data-key=""><i>F6</i> </div>
+                    <div class="key" data-key=""><i>F7</i> </div>
+                    <div class="key" data-key=""><i>F8</i> </div>
+                </div>
+                <div class="key-group-3 group">
+                    <div class="key" data-key=""><i>F9</i> </div>
+                    <div class="key" data-key=""><i>F10</i> </div>
+                    <div class="key" data-key=""><i>F11</i> </div>
+                    <div class="key" data-key=""><i>F12</i> </div>
+                </div>
+                <div class="key-group-4 group">
+                    <div class="key" data-key=""><i>PrtScn <br> SysRq</i> </div>
+                    <div class="key" data-key=""><i>Scroll <br> Lock</i> </div>
+                    <div class="key" data-key=""><i>Pause <br> Break</i> </div>
+                </div>
+            </div>
+            <div class="kb-second-row">
+                <div class="kb-first-column">
+                    <div class="num-row rows">
+                        <div class="key" id="num-key-1" data-key=""><i>~<br>`</i></div>
+                        <div class="key" id="num-key-2" data-key=""><i>!<br>1</i></div>
+                        <div class="key" id="num-key-3" data-key=""><i>@<br>2</i></div>
+                        <div class="key" id="num-key-4" data-key=""><i>#<br>3</i></div>
+                        <div class="key" id="num-key-5" data-key=""><i>$<br>4</i></div>
+                        <div class="key" id="num-key-6" data-key=""><i>%<br>5</i></div>
+                        <div class="key" id="num-key-7" data-key=""><i>^<br>6</i></div>
+                        <div class="key" id="num-key-8" data-key=""><i>&<br>7</i></div>
+                        <div class="key" id="num-key-9" data-key=""><i>*<br>8</i></div>
+                        <div class="key" id="num-key-10" data-key=""><i>(<br>9</i></div>
+                        <div class="key" id="num-key-11" data-key=""><i>)<br>0</i></div>
+                        <div class="key" id="num-key-12" data-key=""><i>_<br>-</i></div>
+                        <div class="key" id="num-key-13" data-key=""><i>+<br>=</i></div>
+                        <div class="key backspace" id="num-key-14" data-key=""><i>backspace</i></div>
+                    </div>
+                    <div class="top-row rows">
+                        <div class="key tab" id="top-key-1" data-key=""><i>Tab</i></div>
+                        <div class="key" id="top-key-2" data-key=""><i>Q</i></div>
+                        <div class="key" id="top-key-3" data-key=""><i>W</i></div>
+                        <div class="key" id="top-key-4" data-key=""><i>E</i></div>
+                        <div class="key" id="top-key-5" data-key=""><i>R</i></div>
+                        <div class="key" id="top-key-6" data-key=""><i>T</i></div>
+                        <div class="key" id="top-key-7" data-key=""><i>Y</i></div>
+                        <div class="key" id="top-key-8" data-key=""><i>U</i></div>
+                        <div class="key" id="top-key-9" data-key=""><i>I</i></div>
+                        <div class="key" id="top-key-10" data-key=""><i>O</i></div>
+                        <div class="key" id="top-key-11" data-key=""><i>P</i></div>
+                        <div class="key" id="top-key-12" data-key=""><i>{<br>[</i></div>
+                        <div class="key" id="top-key-13" data-key=""><i>}<br>]</i></div>
+                        <div class="key tab" id="top-key-14" data-key=""><i>|<br>\</i></div>
+                    </div>
+                    <div class="home-row rows">
+                        <div class="key caps-lock" id="home-key-1" data-key=""><i>Caps Lock</i></div>
+                        <div class="key" id="home-key-2" data-key=""><i>A</i></div>
+                        <div class="key" id="home-key-3" data-key=""><i>S</i></div>
+                        <div class="key" id="home-key-4" data-key=""><i>D</i></div>
+                        <div class="key" id="home-key-5" data-key=""><i>F</i></div>
+                        <div class="key" id="home-key-6" data-key=""><i>G</i></div>
+                        <div class="key" id="home-key-7" data-key=""><i>H</i></div>
+                        <div class="key" id="home-key-8" data-key=""><i>J</i></div>
+                        <div class="key" id="home-key-9" data-key=""><i>K</i></div>
+                        <div class="key" id="home-key-10" data-key=""><i>L</i></div>
+                        <div class="key" id="home-key-11" data-key=""><i>:<br>;</i></div>
+                        <div class="key" id="home-key-12" data-key=""><i>"<br>'</i></div>
+                        <div class="key enter" id="home-key-13" data-key=""><i>Enter</i></div>
+                    </div>
+                    <div class="bottom-row rows">
+                        <div class="key shift" id="bottom-key-1" data-key=""><i>Shift</i></div>
+                        <div class="key" id="bottom-key-2" data-key=""><i>Z</i></div>
+                        <div class="key" id="bottom-key-3" data-key=""><i>X</i></div>
+                        <div class="key" id="bottom-key-4" data-key=""><i>C</i></div>
+                        <div class="key" id="bottom-key-5" data-key=""><i>V</i></div>
+                        <div class="key" id="bottom-key-6" data-key=""><i>B</i></div>
+                        <div class="key" id="bottom-key-7" data-key=""><i>N</i></div>
+                        <div class="key" id="bottom-key-8" data-key=""><i>M</i></div>
+                        <div class="key" id="bottom-key-9" data-key=""><i><<br>,</i></div>
+                        <div class="key" id="bottom-key-10" data-key=""><i>><br>.</i></div>
+                        <div class="key" id="bottom-key-11" data-key=""><i>?<br>/</i></div>
+                        <div class="key shift" id="bottom-key-12" data-key=""><i>Shift</i></div>
+                    </div>
+                    <div class="func-row rows">
+                        <div class="key ctrl" id="func-key-1" data-key=""><i>Ctrl</i></div>
+                        <div class="key window" id="func-key-2" data-key=""><i class='bx bxl-windows'></i></div>
+                        <div class="key alt" id="func-key-3" data-key=""><i>Alt</i></div>
+                        <div class="key space" id="func-key-4" data-key=""><i></i></div>
+                        <div class="key alt" id="func-key-5" data-key=""><i>AltGr</i></div>
+                        <div class="key window" id="func-key-6" data-key=""><i class='bx bxl-windows'></i></div>
+                        <div class="key document" id="func-key-7" data-key=""><i class='bx bx-copy-alt' ></i></div>
+                        <div class="key ctrl" id="func-key-8" data-key=""><i>Ctrl</i></div>
+                    </div>
+                </div>
+                <div class="kb-second-column">
+                    <div class="row-1">
+                        <div class="key-row-1">
+                            <div class="key" data-key=""><i>Insert</i></div>
+                            <div class="key" data-key=""><i>Home</i></div>
+                            <div class="key" data-key=""><i>Page<br>Up</i></div>
+                        </div>
+                        <div class="key-row-2">
+                            <div class="key" data-key=""><i>Delete</i></div>
+                            <div class="key" data-key=""><i>End</i></div>
+                            <div class="key" data-key=""><i>Page<br>Down</i></div>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <div class="key single" data-key=""><i class='bx bx-chevron-up' ></i></div>
+                        <div class="key-row">
+                            <div class="key" data-key=""><i class='bx bx-chevron-left' ></i></div>
+                            <div class="key" data-key=""><i class='bx bx-chevron-down' ></i></div>
+                            <div class="key" data-key=""><i class='bx bx-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kb-third-column">
+                    <div class="key" data-key=""><i>Num<br>Lock</i></div>
+                    <div class="key" data-key=""><i>/</i></div>
+                    <div class="key" data-key=""><i>*</i></div>
+                    <div class="key" data-key=""><i>-</i></div>
+                    <div class="key" data-key=""><i>7</i></div>
+                    <div class="key" data-key=""><i>8</i></div>
+                    <div class="key" data-key=""><i>9</i></div>
+                    <div class="key plus" data-key=""><i>+</i></div>
+                    <div class="key" data-key=""><i>4</i></div>
+                    <div class="key" data-key=""><i>5</i></div>
+                    <div class="key" data-key=""><i>6</i></div>
+                    <div class="key" data-key=""><i>1</i></div>
+                    <div class="key" data-key=""><i>2</i></div>
+                    <div class="key" data-key=""><i>3</i></div>
+                    <div class="key plus" data-key=""><i>Enter</i></div>
+                    <div class="key zero" data-key=""><i>0</i></div>
+                    <div class="key" data-key=""><i>.</i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>Released by Aman Jha | Copyright @ 2022</footer>
+
+    <script>
+        let keys = document.querySelectorAll('.keyboard-border .key'),
+            keyPad = document.querySelector('.keyboard-border'),
+            display = document.querySelector('.display');
+
+            if(key && keyPad && display) {
+                let capsLockMode = false;
+                keys.forEach(key => {
+                    key.addEventListener('click', function() {
+                        if(this.classList.contains('caps-lock')) {
+                            capsLockMode ? capsLockMode = flase : capsLockMode = true;
+                        }
+                        else if(this.classList.contains('backspace')) {
+                            let str = display.innerTest;
+                            display.innerTest = str.substring(0, (str.length-1));
+                        }
+                        else {
+                            if(capsLockMode) {
+                                display.innerTest += this.innerTest.toUpperCase();
+                            }
+                            else {
+                                display.innerTest += this.innerTest.toLowerCase();
+                            }
+                        }
+                    })
+                    console.log(key);
+                })
+            }
+    </script>
+</body>
+
+</html>
