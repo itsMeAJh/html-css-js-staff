@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black and White website | Theme website</title>
+
+    <!------------------ link css files ------------------>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!------------------ main content ------------------->
+    <nav class="navigation">
+        <header>
+            <div class="image-text">
+                <span class="logo">
+                    <img class="img-resize" src="../img/logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="company-name" data-text="&nbsp;Mohini Tranders">&nbsp;Mohini Tranders&nbsp;</span>
+                    <span class="profession-discription" data-text="&nbsp;Manufacterer">&nbsp;Manufacterer&nbsp;</span>
+                </div>
+            </div>
+        </header>
+        <div class="menu-container">
+            <ul class="nav-links">
+                <li class="nav-list active">
+                    <a href="#">
+                        <span class="nav-text text">Home</span>
+                        <i class='bx bx-home-alt nav-icon text'></i>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="#">
+                        <span class="nav-text text">Products</span>
+                        <i class='bx bxl-product-hunt nav-icon text' ></i>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="#">
+                        <span class="nav-text text">About Us</span>
+                        <i class='bx bx-info-circle nav-icon text' ></i>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="#">
+                        <span class="nav-text text">Contact</span>
+                        <i class='bx bxs-contact nav-icon text' ></i>
+                    </a>
+                </li>
+                <dev class="indicator"><span></span></dev>
+            </ul>
+        </div>
+
+        <div class="my-account">
+            <div class="profile-photo">
+            </div>
+            <span class="my-name text">My Account</span>
+            <i class='bx bx-chevron-down nav-icon'></i>
+        </div>
+    </nav>
+
+    <section class="section-home">
+        <dev class="background">
+            <div class="lists">
+                <div class="list" id="list-1"><span></span><a href="#"></a></div>
+                <div class="list" id="list-2"><span></span><a href="#"></a></div>
+                <div class="list" id="list-3"><span></span><a href="#"></a></div>
+                <div class="list" id="list-4"><span></span><a href="#"></a></div>
+            </div>
+        </dev>
+        <!-- <img src="../img/manu-background.jpg" alt="" class="rounded-corners"> -->
+        <dev class="text">
+            <h1>What do you need man?</h1>
+            <p>This is what you need dude Your love.</p>
+            <p>Lorem ipsum dolor sit.</p>
+        </dev>
+        <dev class="triangle"></dev>
+        <div class="dot" id="dot-1"></div>
+        <div class="dot" id="dot-2"></div>
+        
+    </section>
+
+    <!------------------ javasricpt --------------------->
+    <script>
+        const list = document.querySelectorAll('.nav-list');
+        const btn = document.querySelector('.my-account .nav-icon');
+        const account = document.querySelector('.my-account')
+
+        function activeLink() {
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click', activeLink));
+
+        btn.addEventListener('click', () => {
+            account.classList.add('account-more');
+        });
+
+
+        // const buttons = document.querySelector('.menu-container .indicator');
+        // buttons.forEach(btn => {
+        //     btn.addEventListener('click', function(e) {
+
+        //         let x = e.clientX - e.target.offsetLeft;
+        //         let y = e.clientY - e.target.offsetTop;
+
+        //         let ripples = document.createElement('.menu-container  .indicator span');
+        //         ripples.style.left = x + 'px';
+        //         ripples.style.top = y + 'px';
+        //         this.appendChild(ripples);
+
+        //         setTimeout(() => {
+        //             ripples.remove()
+        //         }, 1000);
+        //     })
+        // })
+    </script>
+    <!------------------ main javasricpt ---------------->
+</body>
+</html>

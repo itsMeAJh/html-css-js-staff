@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Concept for beginners</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .body {
+            min-height: 100vh;
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 1em;
+            padding: 0px 100px;
+        }
+
+        .items {
+            position: relative;
+            /* width: 200px; */
+            height: 300px;
+            border: 1px solid red;
+            /* margin: 20px 20px; */
+        }
+    </style>
+
+</head>
+<body class="body">
+    <div class="container">
+        <div class="items" id="layout-1">this is grid box - 1</div>
+        <div class="items" id="layout-2">this is grid box - 2</div>
+        <div class="items" id="layout-3">this is grid box - 3</div>
+        <div class="items" id="layout-4">this is grid box - 4</div>
+        <div class="items" id="layout-5">this is grid box - 5</div>
+        <div class="items" id="layout-6">this is grid box - 6</div>
+        <div class="items" id="layout-7">this is grid box - 7</div>
+        <div class="items" id="layout-8">this is grid box - 8</div>
+        <div class="items" id="layout-9">this is grid box - 9</div>
+        <div class="items" id="layout-10">this is grid box - 10</div>
+        <div class="items" id="layout-11">this is grid box - 11</div>
+        <div class="items" id="layout-12">this is grid box - 12</div>
+        <div class="items" id="layout-13">this is grid box - 13</div>
+        <div class="items" id="layout-14">this is grid box - 14</div>
+        <div class="items" id="layout-15">this is grid box - 15</div>
+        <div class="items" id="layout-16">this is grid box - 16</div>
+    </div>
+</body>
+</html>

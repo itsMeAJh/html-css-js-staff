@@ -1,0 +1,615 @@
+/*======================= GOOGLE FONTS ======================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/*======================= VARIABLES CSS ======================*/
+:root {
+    --header-height: 3.5rem;
+    /*================= Colors ================*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    /*
+            Purple: hsl(250, 66%, 75%)
+            Blue: hsl(207, 90%, 72%)
+            Pink: hsl(356, 66%, 75%)
+            Teal: hsl(174, 63%, 62%)
+    */
+    --first-hue: 250;
+    --sat: 66%;
+    --lig: 75%;
+    --second-hue: 219;
+
+    --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+    --transparent: transparent;
+    --second-color: #7a5fff;
+    --title-color: hsl(var(--second-hue), 15%, 95%);
+    --text-color: black;
+    --text-color-light: #505050;
+    --body-color: hsl(var(--second-hue), 48%, 8%);
+    --container-color: hsl(var(--second-hue), 32%, 12%);
+
+    /*================= Font and typography ================*/
+    /*.5rem = 8px | 1rem = 16px ...
+    /*===== Defualts values are given =====*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+    --normal-font-weight: normal;
+    --bold-text: bold;
+    --semi-bold-text: 600;
+
+    /*================= Font weight ================*/
+    --font-medium: 500;
+    --font-semibold: 600
+        /*================= z index ================*/
+        --z-tooltip: 10;
+    --z-fixed: 100 --z-modal: 1000
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+
+    :root {
+
+        /* --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+        --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+        --title-color: hsl(var(--second-hue), 15%, 95%);
+        --text-color: hsl(var(--second-hue), 8%, 75%);
+        --text-color-light: hsl(var(--second-hue), 4%, 55%);
+        --body-color: hsl(var(--second-hue), 48%, 8%);
+        --container-color: hsl(var(--second-hue), 32%, 12%); */
+
+        --biggest-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+
+    .navigation .menu-container {
+        display: block;
+    }
+}
+
+
+/*====================== BASE ======================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--body-font);
+    /* background: var(--body-color); */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img.rounded-corners {
+    border-radius: 20px;
+}
+
+.navigation .text {
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--normal-font-weight);
+    letter-spacing: 1px;
+}
+
+.navigation .img-resize {
+    width: 40px;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    /* background: var(--first-color-alt); */
+}
+
+.navigation .image-text {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 60px;
+    margin: 0px 80px 0px 50px;
+}
+
+
+.navigation .header-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    line-height: 20px;
+    color: var(--transparent);
+    -webkit-text-stroke: 1px var(--text-color);
+}
+
+.navigation .header-text .company-name::before,
+.navigation .header-text .profession-discription::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--text-color);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 3px solid var(--text-color);
+}
+
+.navigation .header-text:hover .company-name::before,
+.navigation .header-text:hover .profession-discription::before {
+    width: 80%;
+    -webkit-text-stroke: 1px var(--text-color);
+}
+
+.navigation .header-text .company-name {
+    font-size: var(--h2-font-size);
+    font-weight: var(--semi-bold-text);
+    white-space: nowrap;
+}
+
+.navigation .header-text .profession-discription {
+    font-size: var(--h3-font-size);
+    -webkit-text-stroke: .7px var(--text-color);
+}
+
+.menu-container {
+    display: none;
+}
+
+.menu-container ul {
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-container ul li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0px 15px;
+    list-style: none;
+    z-index: 2;
+}
+
+.menu-container ul li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.menu-container ul li a .nav-icon {
+    position: relative;
+    display: black;
+    line-height: 60px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.menu-container ul li.active a .nav-icon {
+    transform: translateY(34px);
+}
+
+.menu-container ul li a .nav-text {
+    position: absolute;
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.menu-container ul li.active a .nav-text {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.menu-container .indicator {
+    position: absolute;
+    bottom: -50%;
+    left: 15px;
+    width: 70px;
+    height: 70px;
+    background: #9584E6;
+    border-radius: 10px;
+    border: 5px solid white;
+    transform: rotate(45deg);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu-container .indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60px;
+    height: 30px;
+    background: #a99af1;
+    transform: rotate(0deg);
+}
+
+.menu-container ul li:nth-child(1).active~.indicator {
+    transform: translate(calc(100px * 0)) rotate(45deg);
+}
+
+.menu-container ul li:nth-child(2).active~.indicator {
+    transform: translate(calc(100px * 1)) rotate(calc(45deg * 3));
+}
+
+.menu-container ul li:nth-child(3).active~.indicator {
+    transform: translate(calc(100px * 2)) rotate(calc(45deg * 5));
+}
+
+.menu-container ul li:nth-child(4).active~.indicator {
+    transform: translate(calc(100px * 3)) rotate(calc(45deg * 7));
+}
+
+.menu-container ul li:nth-child(5).active~.indicator {
+    transform: translate(calc(100px * 4)) rotate(calc(45deg * 13));
+}
+
+.navigation .my-account {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0px 30px;
+    /* padding: 5px; */
+    white-space: nowrap;
+    border-radius: 10px;
+    overflow-x: hidden;
+    transition: width 0.5s, background 0.5s;
+}
+
+.navigation .my-account .my-name,
+.navigation .my-account .nav-icon {
+    display: none;
+}
+
+.navigation .my-account:hover {
+    width: 210px;
+    background: var(--first-color-alt);
+    transition: width 0.5s, background 0.5s;
+}
+
+
+.navigation .my-account:hover .my-name,
+.navigation .my-account:hover .nav-icon {
+    color: black;
+    display: block;
+}
+
+.navigation .my-account:hover .nav-icon {
+    position: relative;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--normal-font-size);
+}
+
+.navigation .my-account:hover .nav-icon:hover {
+    background: var(--first-color);
+}
+
+
+.navigation .my-account .profile-photo {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    background: url('../img/R.jfif') no-repeat center center/cover;
+    border: 3px solid var(--first-color);
+    border-radius: 50%;
+    padding: 27px;
+    margin-left: 4px;
+}
+
+
+
+.navigation .my-account img {
+    width: 60px;
+}
+
+.navigation .my-account .my-name {
+    padding: 0 10px;
+}
+
+.section-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-home .background {
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 450px;
+    height: 400px;
+    background: var(--first-color-alt);
+    transform: translateX(-450px);
+    transition: transform 0.5s ease-in;
+}
+
+.section-home .background:hover {
+    transform: translateX(0px);
+    transition: transform 0.5s ease-out;
+}
+
+.section-home .background::before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    right: -144px;
+    width: 288px;
+    height: 289px;
+    background: var(--first-color);
+    transform: rotate(45deg);
+    border-radius: 10px;
+    /* z-index: 1; */
+}
+
+.section-home .background::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: -96px;
+    width: 397.2px;
+    height: 203px;
+    background: var(--first-color);
+    transform: skewX(-45deg);
+}
+
+.background .lists {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 65px;
+    z-index: 1;
+}
+
+.background .list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 300px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: rgb(107, 100, 199);
+    box-shadow: 1px 0 4px #624dcc,
+        0 1px 4px #624dcc,
+        -4px 0 4px #624dcc;
+}
+
+.background .list span {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 50px;
+    height: 15px;
+    border-top-right-radius: 30px;
+    background: rgb(107, 100, 199);
+}
+
+.background .list span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 15px;
+    height: 15px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background: rgb(83, 75, 190);
+}
+
+.background .list span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 15px;
+    height: 15px;
+    background: rgb(107, 100, 199);
+    z-index: -1;
+}
+
+.background #list-1 {
+    margin-left: 40px;
+}
+
+.background .list a {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #a99af1;
+    box-shadow: inset 4px 0 10px 0px #8f7cee,
+        inset 0 4px 10px 0px #8f7cee,
+        inset -4px 0 10px 0px #8f7cee,
+        inset 0px -4px 10px 0px #8f7cee;
+}
+
+.section-home .text {
+    position: absolute;
+    top: auto;
+    right: 0;
+    text-align: center;
+    margin: 40px 100px;
+    margin-left: 250px;
+}
+
+.section-home .text h1 {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: var(--biggest-font-size);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.text p {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: var(--h3-font-size);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+}
+
+.section-home .scroll-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: center;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid var(--first-color);
+    border-radius: 5px;
+}
+
+.triangle {
+    position: absolute;
+    bottom: 60px;
+    background-color: var(--first-color);
+    text-align: left;
+    animation: 1s ease-in 1s infinite alternate slidein;
+}
+
+@keyframes slidein {
+    0% {
+        bottom: 60px;
+    }
+
+    100% {
+        bottom: 40px;
+    }
+}
+
+.triangle:before,
+.triangle:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+
+.triangle,
+.triangle:before,
+.triangle:after {
+    width: 1em;
+    height: 1em;
+    border-top-right-radius: 30%;
+}
+
+.triangle {
+    transform: rotate(-60deg) skewX(-30deg) scale(1, .866);
+}
+
+.triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+.triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+
+.dot {
+    position: absolute;
+    bottom: 0;
+    left: center;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+#dot-1 {
+    bottom: 30px;
+    width: 10px;
+    height: 10px;
+    animation: 1s ease-in 1s infinite alternate slide-dot-1;
+}
+
+@keyframes slide-dot-1 {
+    to {
+        bottom: 20px;
+    }
+
+    from {
+        bottom: 30px;
+    }
+}
+
+#dot-2 {
+    bottom: 15px;
+    width: 5px;
+    height: 5px;
+    animation: 1s ease-in 1s infinite alternate slide-dot-2;
+}
+
+@keyframes slide-dot-2 {
+    to {
+        bottom: 10px;
+    }
+
+    from {
+        bottom: 15px;
+    }
+}
+
+
+
+/*====================== THEME ======================*/
+
+
+
+
+/*================= Variables Dark theme ================*/
+
+
+
+
+/*=============
+        Color changes in some parts of 
+        the website, in light theme
+============*/
